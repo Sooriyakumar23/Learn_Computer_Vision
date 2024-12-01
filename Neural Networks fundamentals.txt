@@ -1,0 +1,50 @@
+Differences between Train, Valid and Test set
+	- Train set is used to train a model
+	- Valid set is used to validate the model performance/accuracy while training
+	- Test set is used to test the model performance/accuracy in real env
+
+Overfittting: Performs well on Train and Valid sets but not on Test set
+
+Dropout is one of the solution for Overfitting. Dropout is randomly inactivate some neurons.
+Dropout will make our model more robust so that it will not rely completely on certain neurons.
+
+In Neural network, hidden layers extract the features/patterns from the input(initial layers extract lesser features then subsequent layers extract complex and more complex features)
+
+Neural Network jargons
+	- Input Layer
+	- Hidden Layer
+	- Output Layer
+	- Flatten
+	- Feed forward
+	- Loss function
+	- Cost function
+	- Neurons
+	- Weight
+	- Bias
+	- Activation functions
+		-- Relu
+		-- Sigmoid
+		-- Softmax
+		-- Leaky Relu.....
+	- Optimizers
+	- Backpropagation
+	- Learning rate
+	- Epoch & Iterations
+	- Batches
+	- Batch Normalization
+	- Dropout
+	- Hyperparameter
+
+* Difference between loss function and cost function:
+	- Loss Function:- MSE / MAE (Calculate difference between ground truth and predicted value)
+	- Cost Function:- Sum of Loss Function
+
+* Activation functions selection:
+	- Relu => Regression
+	- Sigmoid => Binary Classification
+	- Softmax => MultiClass Classification
+
+* Usages of Weight, Bias and Activation function:
+	- Weight extracts the low level features (In Number 2 get the Half circle pattern, diagonal line[/], horizontal line[_])
+	- Bias shift the neuron activation point (Fans speed determines by which point it sets[1, 2, 3, 4, 5]. Bias can shift by 0.2[1.2, 2.2, 3.2, 4.2, 5.2])
+	- Activation Function: Activates/Deactivates a neuron and Give non-linear capability
