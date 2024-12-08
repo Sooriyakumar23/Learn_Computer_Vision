@@ -1,0 +1,34 @@
+Sobel Kernel like this will detect horizontal lines: 
+[
+	[-1, 0, 1],
+	[-2, 0, 2],
+	[1, 0, 1]
+]
+
+Pooling
+	- Reduce dimension
+	- Pick most prominent features
+	- Varities
+		-- Max
+		-- Min
+		-- Average
+
+Output size Formula for Convolution/Pooling:
+1 + ((InputSize - KernelSize/PoolingSize + 2 x PaddingSize) / StrideSize)
+
+eg:- Input = 60 x 60, Kernel = 3 x 3, Padding = 1, Stride = 2
+1 + ((60 - 3 + 2 x 1) / 2) = 1 + ((60 - 1) / 2) = 1 + (59/2) = 1 + 29 = 30
+Output after Convolution = 30 x 30
+
+Intermediate Input for Pooling after Convolution = 30 x 30, Pooling = 2 x 2, Padding = 0, Stride = 2
+1 + ((30 - 2 + 2 x 0) / 2) = 1 + (28 / 2) = 1 + 14 = 15
+Output after Pooling = 15 x 15
+
+In CNN: Kernels, Scale and Shift are learnable parameters
+
+Image => Convolution => Relu(Activation Function) => Batch Normalization => Pooling(Max) => .... => FCN
+
+60 x 60 x 3 => ((3 x 3) x 3) x 64 => 58 x 58 x 64
+
+* Batch Normalization does not change dimension but modify pixel values
+	** Loop through each layers => Get mean(mu), standard deviation(sigma), scale(beta), shift(gamma)
